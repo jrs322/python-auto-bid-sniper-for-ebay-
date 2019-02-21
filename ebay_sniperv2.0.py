@@ -17,7 +17,7 @@ time_left_unil_bid = 5
 
 def connect_selenium_driver():
     try:
-        driver = webdriver.Firefox()
+        driver = webdriver.Chrome(executable_path=r'chromedriver.exe')
         driver.get('https://www.ebay.com')
         time.sleep(3)
         return True
