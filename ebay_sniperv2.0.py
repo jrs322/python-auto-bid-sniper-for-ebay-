@@ -41,7 +41,7 @@ def move_to_bid():
     driver.get(itemidurl)
     time.sleep(3)
     elements = driver.find_element_by_id("MaxBidId")
-    elements.send_keys(maxbidebay)
+    elements.send_keys(MAX_BID)
     elements = driver.find_element_by_id("bidBtn_btn")
     elements.click()
     io = driver.find_element_by_css_selector("a[id*='reviewBidSec_btn']")
@@ -52,6 +52,7 @@ def move_to_bid():
 def main_loop():
     time_left_unil_bid = int(input("Enter time until bid - 15 sec Ex: 8.01 = 8 min 16 sec"))
     ITEM_URL = input("This is where you copy paste the url")
+    MAX_BID = input("This is where you put your max bid with no dollar sign Ex: 8.50 or 200.50")
     LOGIN_PASSWORD = input("enter password")
     if len(LOGIN_PASSWORD) > 15:
         print ("Error! Only 15 characters allowed!")
